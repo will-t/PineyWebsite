@@ -42,6 +42,13 @@ openLive() {
 this.liveFlag = !this.liveFlag;
 this.menuSetting = false;
 this.PrRequest = false;
+//(<HTMLInputElement>document.getElementById('BodyMain')).style['background-color'] = 'transparent';
+let color = (<HTMLInputElement>document.getElementById('BodyMain')).style.backgroundColor;
+if(color == 'black'){
+(<HTMLInputElement>document.getElementById('BodyMain')).style.backgroundColor = 'white';
+}else{
+(<HTMLInputElement>document.getElementById('BodyMain')).style.backgroundColor = 'black';
+} 
 return this.liveFlag;
 }
 openPrRequest() {
